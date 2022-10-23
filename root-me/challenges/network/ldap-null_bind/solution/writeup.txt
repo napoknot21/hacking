@@ -1,0 +1,25 @@
+CREDENTIALS :
+  mail: sabu@anonops.org
+
+FIRST METHOD (easy) :
+  INSTALL openldap
+
+  RUN ldapsearch -x -b "ou=anonymous,dc=challenge01,dc=root-me,dc=org" -H "ldap://challenge01.root-me.org:54013"
+
+  FIND the mail in the output
+
+SECOND METHOD (manually) :
+  INSTALL ldap3 (python library) : pip install ldap3
+  
+  OPEN the python interpreter: python
+  
+  FOLLOW the follow instrucctions :
+    >>> import ldap3
+    >>> server = ldap3.Server('212.129.38.224', get_info=ldap3.ALL, port=54013)
+    >>> connection = ldap3.Connection(server)
+    >>> connection.bind() [output=TRUE]
+    >>> server.info [output: the server info]
+    >>> connection.search(search_base='ou=anonymous,dc=challenge01,dc=root-me,dc=org', search_filter='(objectClass=*)', attributes='*') [ouptut=TRUE]
+    >>> connection.entries [output=the research]
+
+  FIND the mail in the last output

@@ -1,0 +1,18 @@
+# Nmap 7.92 scan initiated Fri Sep 16 00:11:15 2022 as: nmap -sC -sV -p22,80 -oN targeted 10.10.11.178
+Nmap scan report for 10.10.11.178
+Host is up (0.018s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 38:c2:97:32:7b:9e:c5:65:b4:4b:4e:a3:30:a5:9a:a5 (RSA)
+|   256 33:b3:55:f4:a1:7f:f8:4e:48:da:c5:29:63:13:83:3d (ECDSA)
+|_  256 a1:f1:88:1c:3a:39:72:74:e6:30:1f:28:b6:80:25:4e (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-trane-info: Problem with XML parsing of /evox/about
+|_http-title: Vessel
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 16 00:11:23 2022 -- 1 IP address (1 host up) scanned in 8.38 seconds

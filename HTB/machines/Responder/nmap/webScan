@@ -1,0 +1,14 @@
+# Nmap 7.92 scan initiated Thu Aug 25 15:26:11 2022 as: nmap --script http-enum -p80 -oN webScan unika.htb
+Nmap scan report for unika.htb (10.129.156.145)
+Host is up (0.021s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| http-enum: 
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.52 (win64) openssl/1.1.1m php/8.1.1'
+|   /icons/: Potentially interesting folder w/ directory listing
+|   /img/: Potentially interesting directory w/ listing on 'apache/2.4.52 (win64) openssl/1.1.1m php/8.1.1'
+|   /inc/: Potentially interesting directory w/ listing on 'apache/2.4.52 (win64) openssl/1.1.1m php/8.1.1'
+|_  /js/: Potentially interesting directory w/ listing on 'apache/2.4.52 (win64) openssl/1.1.1m php/8.1.1'
+
+# Nmap done at Thu Aug 25 15:26:22 2022 -- 1 IP address (1 host up) scanned in 10.51 seconds

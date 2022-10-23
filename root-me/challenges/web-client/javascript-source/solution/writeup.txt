@@ -1,0 +1,9 @@
+CREDENTIALS:
+  passwd: 123456azerty
+
+
+VALIDATE the first access by entering nothing into the passwd entry 
+
+THEN check the source pressing F12
+
+FIND the login.js source and find the passwd in the login() function

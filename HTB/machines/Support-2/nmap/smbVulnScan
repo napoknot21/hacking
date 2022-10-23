@@ -1,0 +1,8 @@
+# Nmap 7.92 scan initiated Wed Aug 31 17:02:13 2022 as: nmap -Pn --script "vuln and safe" -p445 -oN smbVulnScan 10.10.11.174
+Nmap scan report for support.htb (10.10.11.174)
+Host is up (0.016s latency).
+
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+# Nmap done at Wed Aug 31 17:02:16 2022 -- 1 IP address (1 host up) scanned in 2.47 seconds

@@ -1,0 +1,12 @@
+CREDENTIALS:
+  user: 4dm1n
+  passwd: sh.org
+
+PRESS F12 in order to check the page structure !
+
+GO to "sources" windows and CHECK the login.js file
+
+in the function login, we find this: 
+  pseudo=="4dm1n" && password=="sh.org"
+
+Validate the challenge !

@@ -1,0 +1,12 @@
+# Nmap 7.92 scan initiated Fri Sep 16 00:26:33 2022 as: nmap --script http-enum -p80 -oN webScan 10.10.11.178
+Nmap scan report for vessel.htb (10.10.11.178)
+Host is up (0.019s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| http-enum: 
+|   /login/: Login page
+|   /js/: Potentially interesting folder
+|_  /register/: Potentially interesting folder
+
+# Nmap done at Fri Sep 16 00:26:41 2022 -- 1 IP address (1 host up) scanned in 8.02 seconds

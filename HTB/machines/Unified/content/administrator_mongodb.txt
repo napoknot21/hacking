@@ -1,0 +1,6 @@
+"_id" : ObjectId("61ce278f46e0fb0012d47ee4"),
+	"name" : "administrator",
+	"email" : "administrator@unified.htb",
+	"x_shadow" : "$6$Ry6Vdbse$8enMR5Znxoo.WfCMd/Xk65GwuQEPx1M.QP8/qHiQV0PvUc3uHuonK4WcTQFN1CRk3GwQaquyVwCVq8iQgPTt4.",
+	"time_created" : NumberLong(1640900495),
+	"last_site_name" : "default",

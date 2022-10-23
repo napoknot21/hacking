@@ -1,0 +1,13 @@
+CREDENTIALS :
+  username: GOD
+  password: HIDDEN
+
+PRESS F12 in order to see the sources window 
+
+CHECK the login.js file
+
+In the connexion() function, there's a management of the list TheLists: ["GOD:HIDDEN"]
+
+The function separe (split(":") method) the string using the ":" as pattern
+
+SO the user is what to the left of : and the passwd what is to the right !

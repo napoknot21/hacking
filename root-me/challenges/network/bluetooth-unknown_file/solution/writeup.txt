@@ -1,0 +1,18 @@
+SOLUTION:
+
+	c1d0349c153ed96fe2fadf44e880aef9e69c122b
+
+
+WHERE 
+	Sha1(0C:B3:19:B9:4F:C6GT-S7390G) = c1d0349c153ed96fe2fadf44e880aef9e69c122b
+
+WITH 
+	MAC ADDRESS: 0C:B3:19:B9:4F:C6 [need to be converted in uppercase]
+	PHONE_NAME (Remote name): GT-S7390G
+	[mac_address][phone_name] in sha1 = c1d0349c153ed96fe2fadf44e880aef9e69c122b
+
+HOW 
+	- Open the file with wireshark
+	- check the in INFO" column the : "Remote name requeste complete"
+	- the mac address is in brackets ()
+	- the name is in remote name section

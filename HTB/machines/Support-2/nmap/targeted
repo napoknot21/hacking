@@ -1,0 +1,23 @@
+# Nmap 7.92 scan initiated Wed Aug 31 16:53:49 2022 as: nmap -sC -sV -Pn -p53,88,135,139,389,445 -oN targeted 10.10.11.174
+Nmap scan report for support.htb (10.10.11.174)
+Host is up (0.031s latency).
+
+PORT    STATE SERVICE       VERSION
+53/tcp  open  domain        Simple DNS Plus
+88/tcp  open  kerberos-sec  Microsoft Windows Kerberos (server time: 2022-08-31 14:53:56Z)
+135/tcp open  msrpc         Microsoft Windows RPC
+139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: support.htb0., Site: Default-First-Site-Name)
+445/tcp open  microsoft-ds?
+Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-08-31T14:54:01
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 31 16:54:39 2022 -- 1 IP address (1 host up) scanned in 49.52 seconds

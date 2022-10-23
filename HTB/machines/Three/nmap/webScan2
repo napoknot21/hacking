@@ -1,0 +1,10 @@
+# Nmap 7.92 scan initiated Fri Aug 26 20:26:32 2022 as: nmap --script http-enum -p80 -oN webScan2 thetoppers.htb
+Nmap scan report for thetoppers.htb (10.129.202.213)
+Host is up (0.017s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| http-enum: 
+|_  /images/: Potentially interesting directory w/ listing on 'apache/2.4.29 (ubuntu)'
+
+# Nmap done at Fri Aug 26 20:26:41 2022 -- 1 IP address (1 host up) scanned in 8.26 seconds

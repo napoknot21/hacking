@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Aug 28 16:12:18 2022 as: nmap --script http-enum -p5985 -oN webScan http://10.129.9.2
+Unable to split netmask from target expression: "http://10.129.9.2"
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Sun Aug 28 16:12:18 2022 -- 0 IP addresses (0 hosts up) scanned in 0.17 seconds

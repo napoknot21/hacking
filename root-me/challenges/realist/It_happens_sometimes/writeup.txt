@@ -1,0 +1,12 @@
+USER/PASSWORD : 0010110111101001 
+
+CHECK the http://challenge01.root-me.org/realiste/ch3/admin link and then use Burpsuite to intercept connexion
+Then change in the "Repeater" the GET method for PUT
+
+OTHER SOLUTION:
+
+with curl (on linux), you can use the query 'OPTIONS' (that is not filtered)
+
+curl --request OPTIONS http://challenge01.root-me.org/realiste/ch3/admin/
+
+And then it's ok

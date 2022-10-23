@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Thu Aug 25 15:21:07 2022 as: nmap -sS --min-rate 5000 --open -vvv -n -Pn -p- -oG allPorts 10.129.156.145
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.156.145 ()	Status: Up
+Host: 10.129.156.145 ()	Ports: 80/open/tcp//http///, 5985/open/tcp//wsman///, 7680/open/tcp//pando-pub///	Ignored State: filtered (65532)
+# Nmap done at Thu Aug 25 15:21:34 2022 -- 1 IP address (1 host up) scanned in 26.45 seconds

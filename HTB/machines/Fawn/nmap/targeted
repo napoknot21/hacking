@@ -1,0 +1,2 @@
+# Nmap 7.92 scan initiated Thu Aug 11 03:10:27 2022 as: nmap -sC -sV -p21 -oN targeted 10.129.1.14
+# Nmap done at Thu Aug 11 03:10:30 2022 -- 1 IP address (0 hosts up) scanned in 3.26 seconds

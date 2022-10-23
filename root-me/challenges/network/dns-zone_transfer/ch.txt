@@ -1,0 +1,5 @@
+Paramètres de connexion au challenge
+
+Hôte		challenge01.root-me.org
+Protocole	DNS
+Port		54011

@@ -1,0 +1,10 @@
+# Nmap 7.92 scan initiated Fri Sep 30 20:59:02 2022 as: nmap --script http-enum -p80 -oN webScan 10.10.11.180
+Nmap scan report for shoppy.htb (10.10.11.180)
+Host is up (0.014s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+| http-enum: 
+|_  /login/: Login page
+
+# Nmap done at Fri Sep 30 21:02:17 2022 -- 1 IP address (1 host up) scanned in 194.24 seconds

@@ -1,0 +1,13 @@
+PASSWORD: 6sK0_enable
+
+GIVEN THE LINES :
+username hub password 7 025017705B3907344E 
+username admin privilege 15 password 7 10181A325528130F010D24
+username guest password 7 124F163C42340B112F3830
+
+USING cisco7crack tool we have the results:
+-> 025017705B3907344E : 6sK0_hub
+-> 10181A325528130F010D24 : 6sK0_guest
+-> 124F163C42340B112F3830 : 6sK0_admin
+
+Following this logique, we have the passwd for enable is 6sk0_enable

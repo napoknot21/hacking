@@ -1,0 +1,5 @@
+KEY: CBkFRwfNMMtRjHY
+
+RUN the command: dig @212.129.38.224 -p 54011 axfr ch11.challenge01.root-me.org
+
+CHECK the "DNS tranfer secret key"

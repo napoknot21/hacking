@@ -1,0 +1,5 @@
+# Nmap 7.92 scan initiated Thu Aug 11 12:36:11 2022 as: nmap -p- --open -T5 -v -n -oG allPorts 10.129.172.247
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.172.247 ()	Status: Up
+Host: 10.129.172.247 ()	Ports: 6379/open/tcp//redis///	Ignored State: closed (65534)
+# Nmap done at Thu Aug 11 12:36:18 2022 -- 1 IP address (1 host up) scanned in 6.46 seconds

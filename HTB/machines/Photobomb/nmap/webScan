@@ -1,0 +1,1 @@
+# Nmap 7.92 scan initiated Sat Oct 22 17:35:59 2022 as: nmap --script http-enum -p80 -oN webScan 10.10.11.182

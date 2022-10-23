@@ -1,0 +1,9 @@
+FIRST check the source code (F12) of the webpage
+
+THEN find :
+  <input disabled type="text" name="auth-login" value="" />
+  <input disabled type="submit" value="Member access" name="authbutton" />
+
+REMOVE the "disabled" option in both lines
+
+FINALLY enter "admin" and tap the boutton !
