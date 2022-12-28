@@ -109,3 +109,10 @@ Get the flag at ```/root/root.txt```
 ```
 
 Done !
+
+### References 
+```
+https://0xdedinfosec.vercel.app/blog/hackthebox-metatwo-writeup
+https://wpscan.com/vulnerability/388cd42d-b61a-42a4-8604-99b812db2357
+https://www.youtube.com/watch?v=vP6Uv_sqWh4
+```
