@@ -11,7 +11,7 @@ nmap -sC -sV -p21,22,23,53,80,111,139,445,512,513,514,1099,1524,2049,2121,3306,3
 ```
 > There are a lot but just the first one is usefull
 
-Let's check carefully the ```targeted``` file that we just created. Notice this
+Let's check carefully the [targeted](./nmap/targeted) file that we just created. Notice this
 ```
 21/tcp    open  ftp         vsftpd 2.3.4
 ```
