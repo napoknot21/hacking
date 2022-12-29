@@ -1,0 +1,5 @@
+# Nmap 7.93 scan initiated Thu Dec 29 02:45:01 2022 as: nmap -sS --min-rate 5000 --open -Pn -n -vvv -p- -oG allPorts ctf01.root-me.org
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 212.129.28.18 ()	Status: Up
+Host: 212.129.28.18 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 23/open/tcp//telnet///, 53/open/tcp//domain///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 512/open/tcp//exec///, 513/open/tcp//login///, 514/open/tcp//shell///, 1099/open/tcp//rmiregistry///, 1524/open/tcp//ingreslock///, 2049/open/tcp//nfs///, 2121/open/tcp//ccproxy-ftp///, 3306/open/tcp//mysql///, 3632/open/tcp//distccd///, 5432/open/tcp//postgresql///, 5900/open/tcp//vnc///, 6000/open/tcp//X11///, 6667/open/tcp//irc///, 6697/open/tcp//ircs-u///, 8009/open/tcp//ajp13///, 8180/open/tcp//unknown///, 8787/open/tcp//msgsrvr///, 33365/open/tcp/////, 34314/open/tcp/////, 38911/open/tcp/////, 47920/open/tcp/////
+# Nmap done at Thu Dec 29 02:45:15 2022 -- 1 IP address (1 host up) scanned in 14.20 seconds
