@@ -1,3 +1,5 @@
-# Nmap 7.92 scan initiated Thu Aug 11 01:36:36 2022 as: nmap -p- --open -T5 -v -n -oG allPorts 10.10.11.174
+# Nmap 7.92 scan initiated Wed Aug 31 16:45:21 2022 as: nmap -sS --min-rate 5000 --open -vvv -n -Pn -p- -oG allPorts 10.10.11.174
 # Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
-# Nmap done at Thu Aug 11 01:36:38 2022 -- 1 IP address (0 hosts up) scanned in 1.55 seconds
+Host: 10.10.11.174 ()	Status: Up
+Host: 10.10.11.174 ()	Ports: 53/open/tcp//domain///, 88/open/tcp//kerberos-sec///, 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 389/open/tcp//ldap///, 445/open/tcp//microsoft-ds///, 464/open/tcp//kpasswd5///, 593/open/tcp//http-rpc-epmap///, 636/open/tcp//ldapssl///, 3268/open/tcp//globalcatLDAP///, 3269/open/tcp//globalcatLDAPssl///, 5985/open/tcp//wsman///, 9389/open/tcp//adws///, 49664/open/tcp/////, 49668/open/tcp/////, 49674/open/tcp/////, 49679/open/tcp/////, 49703/open/tcp/////	Ignored State: filtered (65517)
+# Nmap done at Wed Aug 31 16:46:01 2022 -- 1 IP address (1 host up) scanned in 39.82 seconds
