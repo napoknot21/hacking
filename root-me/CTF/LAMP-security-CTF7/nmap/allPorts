@@ -1,0 +1,5 @@
+# Nmap 7.93 scan initiated Fri Dec 30 20:29:08 2022 as: nmap -sS --min-rate 5000 --open -Pn -n -vvv -p- -oG allPorts ctf10.root-me.org
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 163.172.228.224 ()	Status: Up
+Host: 163.172.228.224 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 139/open/tcp//netbios-ssn///, 901/open/tcp//samba-swat///, 8080/open/tcp//http-proxy///, 10000/open/tcp//snet-sensor-mgmt///
+# Nmap done at Fri Dec 30 20:29:35 2022 -- 1 IP address (1 host up) scanned in 26.49 seconds

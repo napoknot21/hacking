@@ -1,0 +1,17 @@
++-------------------------------+----------------------------------+
+| username                      | password                         |
++-------------------------------+----------------------------------+
+| brian@localhost.localdomain   | e22f07b17f98e0d9d364584ced0e3c18 |
+| john@localhost.localdomain    | 0d9ff2a4396d6939f80ffe09b1280ee1 |
+| alice@localhost.localdomain   | 2146bf95e8929874fc63d54f50f1d2e3 |
+| ruby@localhost.localdomain    | 9f80ec37f8313728ef3e2f218c79aa23 |
+| leon@localhost.localdomain    | 5d93ceb70e2bf5daa84ec3d0cd2c731a |
+| julia@localhost.localdomain   | ed2539fe892d2c52c42a440354e8e3d5 |
+| michael@localhost.localdomain | 9c42a1346e333a770904b2a2b37fa7d3 |
+| bruce@localhost.localdomain   | 3a24d81c2b9d0d9aaf2f10c6c9757d4e |
+| neil@localhost.localdomain    | 4773408d5358875b3764db552a29ca61 |
+| charles@localhost.localdomain | b2a97bcecbd9336b98d59d9324dae5cf |
+| foo@bar.com                   | 4cb9c8a8048fd02294477fcb1a41191a |
+| test@nowhere.com              | 098f6bcd4621d373cade4e832627b4f6 |
++-------------------------------+----------------------------------+
+12 rows in set (0.00 sec)

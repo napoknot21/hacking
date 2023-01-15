@@ -1,0 +1,54 @@
+# Nmap 7.93 scan initiated Fri Dec 30 20:31:53 2022 as: nmap -sC -sV -p22,80,139,901,8080,10000 -oN targeted 163.172.228.224
+Nmap scan report for ctf10.root-me.org (163.172.228.224)
+Host is up (0.0070s latency).
+
+PORT      STATE SERVICE     VERSION
+22/tcp    open  ssh         OpenSSH 5.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 418a0d5d596045c4c415f38a8dc09919 (DSA)
+|_  2048 66fba3b4747266f492738fbf61ec8b35 (RSA)
+80/tcp    open  http        Apache httpd 2.2.15 ((CentOS))
+|_http-server-header: Apache/2.2.15 (CentOS)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: Mad Irish Hacking Academy
+139/tcp   open  netbios-ssn Samba smbd 3.5.10-125.el6 (workgroup: MYGROUP)
+901/tcp   open  http        Samba SWAT administration server
+|_http-title: 401 Authorization Required
+| http-auth: 
+| HTTP/1.0 401 Authorization Required\x0D
+|_  Basic realm=SWAT
+8080/tcp  open  http        Apache httpd 2.2.15 ((CentOS))
+|_http-server-header: Apache/2.2.15 (CentOS)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-title: Admin :: Mad Irish Hacking Academy
+|_Requested resource was /login.php
+|_http-open-proxy: Proxy might be redirecting requests
+10000/tcp open  http        MiniServ 1.610 (Webmin httpd)
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-title: Login to Webmin
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: 2h30m01s, deviation: 3h32m09s, median: 0s
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.5.10-125.el6)
+|   Computer name: localhost
+|   NetBIOS computer name: 
+|   Domain name: 
+|   FQDN: localhost
+|_  System time: 2022-12-30T14:32:08-05:00
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 30 20:33:18 2022 -- 1 IP address (1 host up) scanned in 84.75 seconds

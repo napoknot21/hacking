@@ -1,0 +1,16 @@
++-------------------------------+----------------------------------+
+| username                      | password                         |
++-------------------------------+----------------------------------+
+| brian@localhost.localdomain   | my2cents                         |
+| john@localhost.localdomain    | transformersrule                 |
+| alice@localhost.localdomain   | turtles77                        |
+| ruby@localhost.localdomain    | 9f80ec37f8313728ef3e2f218c79aa23 |
+| leon@localhost.localdomain    | qwer1234                         |
+| julia@localhost.localdomain   | madrid                           |
+| michael@localhost.localdomain | somepassword                     |
+| bruce@localhost.localdomain   | LosAngelesLakers                 |
+| neil@localhost.localdomain    | 4773408d5358875b3764db552a29ca61 |
+| charles@localhost.localdomain | chuck33                          |
+| foo@bar.com                   | changeme                         |
+| test@nowhere.com              | test                             |
++-------------------------------+----------------------------------+
