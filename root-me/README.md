@@ -1,7 +1,9 @@
 # Root Me
 
-Some solutions, writes ups from Root-Me challenges !
+Some solutions, writes ups from Root-Me challenges/CTFs !
 
 Check the subfields challenges : [here]("./challenges")
 
-Main webpage : [root-me.org](https://root-me.org)
+Check the CTTs : [ctfs]("./CTF/")
+
+@webpage : [root-me.org](https://root-me.org)
