@@ -2,15 +2,21 @@
 
 Here you will find some write ups of differents machines/fortresses/labs from differents hacking platforms ! and some altenative scripts for enumerating/discovering services !
 
-Hack The Box: [writeups]("./HTB/")
+## Write ups
 
-Root-me : [writeups]("./root-me/")
+Hack The Box: [writeups]("HTB")
 
-Over The Wire : [writeups]("./OTW/")
+Root-me : [writeups]("./root-me")
 
-scripts : [hacking-utils]("./utils-tools/")
+Over The Wire : [writeups]("./OTW")
+
+## Scripts
+
+scripts : [hacking-utils]("./utils-tools")
 
 
-@profile : https://app.hackthebox.com/profile/811773 (HTB)
+## Profiles
 
-@profile : https://www.root-me.org/Napoknot21 (root-me)
+@profile : [HTB](https://app.hackthebox.com/profile/811773)
+
+@profile : [root-me](https://www.root-me.org/Napoknot21)
