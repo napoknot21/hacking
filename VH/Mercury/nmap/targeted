@@ -1,0 +1,115 @@
+# Nmap 7.93 scan initiated Tue Feb  7 12:37:18 2023 as: nmap -sC -sV -p22,8080 -oN targeted 192.168.1.20
+Nmap scan report for 192.168.1.20
+Host is up (0.00050s latency).
+
+PORT     STATE SERVICE    VERSION
+22/tcp   open  ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 c824ea2a2bf13cfa169465bdc79b6c29 (RSA)
+|   256 e808a18e7d5abc5c66164824570dfab8 (ECDSA)
+|_  256 2f187e1054f7b917a2111d8fb330a52a (ED25519)
+8080/tcp open  http-proxy WSGIServer/0.2 CPython/3.8.2
+|_http-server-header: WSGIServer/0.2 CPython/3.8.2
+| http-robots.txt: 1 disallowed entry 
+|_/
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Tue, 07 Feb 2023 11:37:25 GMT
+|     Server: WSGIServer/0.2 CPython/3.8.2
+|     Content-Type: text/html
+|     X-Frame-Options: DENY
+|     Content-Length: 2366
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: same-origin
+|     <!DOCTYPE html>
+|     <html lang="en">
+|     <head>
+|     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+|     <title>Page not found at /nice ports,/Trinity.txt.bak</title>
+|     <meta name="robots" content="NONE,NOARCHIVE">
+|     <style type="text/css">
+|     html * { padding:0; margin:0; }
+|     body * { padding:10px 20px; }
+|     body * * { padding:0; }
+|     body { font:small sans-serif; background:#eee; color:#000; }
+|     body>div { border-bottom:1px solid #ddd; }
+|     font-weight:normal; margin-bottom:.4em; }
+|     span { font-size:60%; color:#666; font-weight:normal; }
+|     table { border:none; border-collapse: collapse; width:100%; }
+|     vertical-align:
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Date: Tue, 07 Feb 2023 11:37:25 GMT
+|     Server: WSGIServer/0.2 CPython/3.8.2
+|     Content-Type: text/html; charset=utf-8
+|     X-Frame-Options: DENY
+|     Content-Length: 69
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: same-origin
+|     Hello. This site is currently in development please check back later.
+|   RTSPRequest: 
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+|     "http://www.w3.org/TR/html4/strict.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request version ('RTSP/1.0').</p>
+|     <p>Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.93%I=7%D=2/7%Time=63E237F4%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,135,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2007\x20Feb\x2020
+SF:23\x2011:37:25\x20GMT\r\nServer:\x20WSGIServer/0\.2\x20CPython/3\.8\.2\
+SF:r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Options:\x20
+SF:DENY\r\nContent-Length:\x2069\r\nX-Content-Type-Options:\x20nosniff\r\n
+SF:Referrer-Policy:\x20same-origin\r\n\r\nHello\.\x20This\x20site\x20is\x2
+SF:0currently\x20in\x20development\x20please\x20check\x20back\x20later\.")
+SF:%r(HTTPOptions,135,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Tue,\x2007\x20Fe
+SF:b\x202023\x2011:37:25\x20GMT\r\nServer:\x20WSGIServer/0\.2\x20CPython/3
+SF:\.8\.2\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nX-Frame-Optio
+SF:ns:\x20DENY\r\nContent-Length:\x2069\r\nX-Content-Type-Options:\x20nosn
+SF:iff\r\nReferrer-Policy:\x20same-origin\r\n\r\nHello\.\x20This\x20site\x
+SF:20is\x20currently\x20in\x20development\x20please\x20check\x20back\x20la
+SF:ter\.")%r(RTSPRequest,1F4,"<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD
+SF:\x20HTML\x204\.01//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\"http://www\.
+SF:w3\.org/TR/html4/strict\.dtd\">\n<html>\n\x20\x20\x20\x20<head>\n\x20\x
+SF:20\x20\x20\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20conte
+SF:nt=\"text/html;charset=utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title
+SF:>Error\x20response</title>\n\x20\x20\x20\x20</head>\n\x20\x20\x20\x20<b
+SF:ody>\n\x20\x20\x20\x20\x20\x20\x20\x20<h1>Error\x20response</h1>\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<p>Error\x20code:\x20400</p>\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20<p>Message:\x20Bad\x20request\x20version\x20\('RTSP/1
+SF:\.0'\)\.</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20code\x20expla
+SF:nation:\x20HTTPStatus\.BAD_REQUEST\x20-\x20Bad\x20request\x20syntax\x20
+SF:or\x20unsupported\x20method\.</p>\n\x20\x20\x20\x20</body>\n</html>\n")
+SF:%r(FourOhFourRequest,A28,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20
+SF:Tue,\x2007\x20Feb\x202023\x2011:37:25\x20GMT\r\nServer:\x20WSGIServer/0
+SF:\.2\x20CPython/3\.8\.2\r\nContent-Type:\x20text/html\r\nX-Frame-Options
+SF::\x20DENY\r\nContent-Length:\x202366\r\nX-Content-Type-Options:\x20nosn
+SF:iff\r\nReferrer-Policy:\x20same-origin\r\n\r\n<!DOCTYPE\x20html>\n<html
+SF:\x20lang=\"en\">\n<head>\n\x20\x20<meta\x20http-equiv=\"content-type\"\
+SF:x20content=\"text/html;\x20charset=utf-8\">\n\x20\x20<title>Page\x20not
+SF:\x20found\x20at\x20/nice\x20ports,/Trinity\.txt\.bak</title>\n\x20\x20<
+SF:meta\x20name=\"robots\"\x20content=\"NONE,NOARCHIVE\">\n\x20\x20<style\
+SF:x20type=\"text/css\">\n\x20\x20\x20\x20html\x20\*\x20{\x20padding:0;\x2
+SF:0margin:0;\x20}\n\x20\x20\x20\x20body\x20\*\x20{\x20padding:10px\x2020p
+SF:x;\x20}\n\x20\x20\x20\x20body\x20\*\x20\*\x20{\x20padding:0;\x20}\n\x20
+SF:\x20\x20\x20body\x20{\x20font:small\x20sans-serif;\x20background:#eee;\
+SF:x20color:#000;\x20}\n\x20\x20\x20\x20body>div\x20{\x20border-bottom:1px
+SF:\x20solid\x20#ddd;\x20}\n\x20\x20\x20\x20h1\x20{\x20font-weight:normal;
+SF:\x20margin-bottom:\.4em;\x20}\n\x20\x20\x20\x20h1\x20span\x20{\x20font-
+SF:size:60%;\x20color:#666;\x20font-weight:normal;\x20}\n\x20\x20\x20\x20t
+SF:able\x20{\x20border:none;\x20border-collapse:\x20collapse;\x20width:100
+SF:%;\x20}\n\x20\x20\x20\x20td,\x20th\x20{\x20vertical-align:");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb  7 12:38:51 2023 -- 1 IP address (1 host up) scanned in 92.79 seconds
