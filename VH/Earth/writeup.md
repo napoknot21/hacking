@@ -1,6 +1,6 @@
 # Earth
 
-Attacker__IP := ```10.0.2.4```
+Attacker_machine_IP := ```10.0.2.4```
 Victim_Machine_IP := ```10.0.2.5```
 
 Start by enumerating the system !
