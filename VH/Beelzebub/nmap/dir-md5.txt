@@ -1,0 +1,8 @@
+/.htaccess           [33m (Status: 403)[0m [Size: 277]
+/.htpasswd           [33m (Status: 403)[0m [Size: 277]
+/.hta                [33m (Status: 403)[0m [Size: 277]
+/wp-admin            [36m (Status: 301)[0m [Size: 348][34m [--> http://192.168.1.55/d18e1e22becbd915b45e0e655429d487/wp-admin/][0m
+/wp-content          [36m (Status: 301)[0m [Size: 350][34m [--> http://192.168.1.55/d18e1e22becbd915b45e0e655429d487/wp-content/][0m
+/wp-includes         [36m (Status: 301)[0m [Size: 351][34m [--> http://192.168.1.55/d18e1e22becbd915b45e0e655429d487/wp-includes/][0m
+/index.php           [32m (Status: 200)[0m [Size: 57718]
+/xmlrpc.php          [33m (Status: 405)[0m [Size: 42]
