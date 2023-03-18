@@ -29,5 +29,5 @@ ip_network=$(echo $ip_address | awk -F "." '{print $1} {print $2} {print $3}' | 
 
 for i in $(seq 1 255); do
     ip_targeted=$ip_network$i
-    timeout 2 $SHELL -c "ping -c 1 $ip_targeted > /dev/null 2>&1" && echo -ne "\t${blueColour}[*] Host: $ip_targeted${endColour} - ${greenColour}ACTIVE${endColour} -> ${purpleColour}$(./osDiscovery.sh $ip_targeted)${endColour}\n" &
+    timeout 2 $SHELL -c "ping -c 1 $ip_targeted > /dev/null 2>&1" && echo -ne "\t${blueColour}[*] Host: $ip_targeted${endColour} - ${greenColour}ACTIVE${endColour} -> ${purpleColour}$($(locate osDiscovery.sh) $ip_targeted)${endColour}\n" &
 done; wait
