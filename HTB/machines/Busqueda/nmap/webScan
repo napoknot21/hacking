@@ -1,0 +1,9 @@
+# Nmap 7.93 scan initiated Sun Apr  9 23:13:54 2023 as: nmap --script http-enum -oN webScan searcher.htb
+Nmap scan report for searcher.htb (10.129.47.42)
+Host is up (0.020s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+# Nmap done at Sun Apr  9 23:14:06 2023 -- 1 IP address (1 host up) scanned in 12.24 seconds
