@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <servers>
+    <server>
+      <id>Inject</id>
+      <username>phil</username>
+      <password>DocPhillovestoInject123</password>
+      <privateKey>${user.home}/.ssh/id_dsa</privateKey>
+      <filePermissions>660</filePermissions>
+      <directoryPermissions>660</directoryPermissions>
+      <configuration></configuration>
+    </server>
+  </servers>
+</settings>
