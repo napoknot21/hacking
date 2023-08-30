@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+
+Server: nginx
+
+Date: Sat, 26 Aug 2023 11:59:46 GMT
+
+Content-Type: application/json
+
+Connection: close
+
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+
+Cache-Control: no-store, no-cache, must-revalidate
+
+Pragma: no-cache
+
+Content-Length: 46
+
+
+
+{id:25,username:napoknot21,is_admin:1}

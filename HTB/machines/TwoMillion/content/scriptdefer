@@ -1,0 +1,28 @@
+$(document).ready(function() {
+            $('#verifyForm').submit(function(e) {
+                e.preventDefault();
+
+                var code = $('#code').val();
+                var formData = { "code": code };
+
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    data: formData,
+                    url: '/api/v1/invite/verify',
+                    success: function(response) {
+                        if (response[0] === 200 && response.success === 1 && response.data.message === "Invite code is valid!") {
+                            // Store the invite code in localStorage
+                            localStorage.setItem('inviteCode', code);
+
+                            window.location.href = '/register';
+                        } else {
+                            alert("Invalid invite code. Please try again.");
+                        }
+                    },
+                    error: function(response) {
+                        alert("An error occurred. Please try again.");
+                    }
+                });
+            });
+        })
