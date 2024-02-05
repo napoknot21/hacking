@@ -1,0 +1,5 @@
+# Nmap 7.94 scan initiated Mon Feb  5 01:32:02 2024 as: nmap -sS --min-rate 5000 --open -Pn -n -vvv -p- -oG allPorts 10.10.11.232
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.11.232 ()	Status: Up
+Host: 10.10.11.232 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 2049/open/tcp//nfs///, 35719/open/tcp/////, 37923/open/tcp/////, 42127/open/tcp/////, 45537/open/tcp/////, 56033/open/tcp/////	Ignored State: closed (65526)
+# Nmap done at Mon Feb  5 01:32:12 2024 -- 1 IP address (1 host up) scanned in 10.86 seconds

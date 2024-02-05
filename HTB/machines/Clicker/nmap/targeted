@@ -1,0 +1,35 @@
+# Nmap 7.94 scan initiated Mon Feb  5 01:32:37 2024 as: nmap -sC -sV -p22,80,111,2049,35719,37923,42127,45537,56033 -oN targeted 10.10.11.232
+Nmap scan report for clicker.htb (10.10.11.232)
+Host is up (0.19s latency).
+
+PORT      STATE SERVICE  VERSION
+22/tcp    open  ssh      OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 89:d7:39:34:58:a0:ea:a1:db:c1:3d:14:ec:5d:5a:92 (ECDSA)
+|_  256 b4:da:8d:af:65:9c:bb:f0:71:d5:13:50:ed:d8:11:30 (ED25519)
+80/tcp    open  http     Apache httpd 2.4.52 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+|_http-title: Clicker - The Game
+111/tcp   open  rpcbind  2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      41331/udp6  mountd
+|   100005  1,2,3      45312/udp   mountd
+|   100005  1,2,3      45537/tcp   mountd
+|_  100005  1,2,3      51651/tcp6  mountd
+2049/tcp  open  nfs      3-4 (RPC #100003)
+35719/tcp open  mountd   1-3 (RPC #100005)
+37923/tcp open  mountd   1-3 (RPC #100005)
+42127/tcp open  nlockmgr 1-4 (RPC #100021)
+45537/tcp open  mountd   1-3 (RPC #100005)
+56033/tcp open  status   1 (RPC #100024)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb  5 01:32:50 2024 -- 1 IP address (1 host up) scanned in 12.86 seconds
